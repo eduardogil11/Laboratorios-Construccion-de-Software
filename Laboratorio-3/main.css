@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 4.0;
+    margin: auto;
+}
+
+header{
+    height: 100;
+    display: flex;
+    color: whitesmoke;
+    background-color: plum;
+    justify-content: center;
+    margin: 2.0;
+}
+
+main{
+    margin: auto;
+    text-align: center;
+    color: palevioletred;
+}
+
+h4{
+    margin: 2.0;
+    color: powderblue;
+}
+
+footer{
+    color: purple;
+    background-color: plum;
+    justify-content: center;
+    padding-left: 15;
+
+}
+
+.datos{
+    color: purple;
+}
