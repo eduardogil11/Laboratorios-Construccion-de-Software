@@ -1,0 +1,57 @@
+header{
+    height: 100;
+    display: flex;
+    color: whitesmoke;
+    background-color: darkred;
+    justify-content: center;
+    margin: 2.0;
+}
+
+h2{
+    margin: 2.0;
+    text-align: center;
+    color:darkslategrey;
+}
+
+h3{
+    margin: 2.0;
+    text-align: center;
+    color: darkred;
+}
+
+h4{
+    margin: 2.0;
+    text-align: center;
+    color: grey;
+}
+
+main{
+    margin: auto;
+    text-align: center;
+    color: darkred;
+}
+
+footer{
+    color: whitesmoke;
+    background-color: darkred;
+    justify-content: center;
+    padding-left: 15;
+
+}
+
+.datos{
+    color: darkred;
+}
+
+img.izquierda {
+    float: left;
+    margin-left: 30px;
+}
+
+div.unir {
+    clear: both;
+}
+
+.link{
+    color: black;
+}
