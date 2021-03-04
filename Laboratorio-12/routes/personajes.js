@@ -1,25 +1,27 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
+const filesystem = require('fs');
 const personajes = ["Bulbasaur", "Charmander", "Squirtle", "Pikachu"];
 
 router.get('/nuevo-personaje', (request, response, next) => {
-    response.send('<h1>Nuevo Personaje</h1><body><h1>Agrega un nuevo Pokémon: </h1><form action="nuevo-personaje" method="POST"><input type="text" name="nombre"><input type="submit" value="Guardar personaje"></form>'); 
+    response.render('nuevo-personaje', {
+    titulo: 'Nuevo Personaje' 
+    }); 
 });
 
 router.post('/nuevo-personaje', (request, response, next) => {
-    console.log(request.body.nombre);
-    personajes.push(request.body.nombre);
+    console.log(request.body.nombre_personaje);
+    personajes.push(request.body.nombre_personaje);
+    filesystem.writeFileSync('Pokemon.txt', request.body.nombre_personaje);
     response.redirect('/personajes');
 });
 
 router.use('/', (request, response, next) => {
-    let html = '<h1>Pokémons: </h1><ul>';
-    for (let personaje of personajes) {
-        html = html + '<li>' + personaje + '</li>';
-    }
-    html = html + '</ul>';
-    response.send(html); 
+    response.render('personajes', { 
+    lista_personajes: personajes, 
+    titulo: 'Pokémons: ' 
+    });
 });
 
 module.exports = router;

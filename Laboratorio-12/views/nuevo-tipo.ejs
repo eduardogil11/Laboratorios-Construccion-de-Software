@@ -1,0 +1,14 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<main class="container">
+
+    <h1><%= titulo %></h1>
+   <form action="nuevo-tipo" method="POST">
+       <input type="text" name="nombre_tipo">
+       <input type="submit" value="Guardar tipo">
+   </form>
+   
+</main>
+
+<%- include('partials/footer.ejs') %>

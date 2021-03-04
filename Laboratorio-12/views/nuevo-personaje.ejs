@@ -1,0 +1,14 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<main class="container">
+
+    <h1><%= titulo %></h1>
+   <form action="nuevo-personaje" method="POST">
+       <input type="text" name="nombre_personaje">
+       <input type="submit" value="Guardar personaje">
+   </form>
+   
+</main>
+
+<%- include('partials/footer.ejs') %>

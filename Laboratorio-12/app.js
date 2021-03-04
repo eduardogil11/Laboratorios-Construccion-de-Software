@@ -3,7 +3,11 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
 const rutasPersonajes = require('./routes/personajes');
+const rutasTipos = require('./routes/tipos');
 
 //Middleware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -17,14 +21,17 @@ app.use((request, response, next) => {
 });
 
 app.use('/personajes', rutasPersonajes);
+app.use('/tipos', rutasTipos);
 
 app.get('/', (request, response, next) => {
     console.log('Bienvenido');
     response.send('<h1>¡Hola mundo!</h1>'); 
 });
 
-app.get('/git', (request, response, next) => {
-    response.sendFile(path.join(__dirname, 'views', 'index.html'));
+app.get('/preguntas', (request, response, next) => {
+    response.render('preguntas', { 
+    titulo: 'Preguntas' 
+    });
 });
 
 app.use((request, response, next) => {
