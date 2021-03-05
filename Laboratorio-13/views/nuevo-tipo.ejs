@@ -1,0 +1,15 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<main class="container">
+
+    <h1><%= titulo %></h1>
+   <form action="nuevo-tipo" method="POST">
+       <h5>Nombre del tipo: </h5><input type="text" name="nombre_tipo">
+       <h5>Link de la imagen del tipo: </h5><input type="text" name="imagen_tipo">
+       <input type="submit" value="Guardar tipo">
+   </form>
+   
+</main>
+
+<%- include('partials/footer.ejs') %>
