@@ -2,7 +2,7 @@ const Personaje = require('../models/personaje');
 
 exports.getNuevoPersonaje = (request, response, next) => {
     response.render('nuevo-personaje', {
-    titulo: 'Nuevo Pokémon: ' 
+    titulo: 'Nuevo Pokémon' 
     }); 
 }
 
@@ -17,6 +17,6 @@ exports.get = (request, response, next) => {
     const personajes = Personaje.fetchAll(); 
     response.render('personajes', { 
     lista_personajes: personajes, 
-    titulo: 'Pokémons: ' 
+    titulo: 'Pokémons' 
     });
 }

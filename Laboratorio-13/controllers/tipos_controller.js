@@ -2,7 +2,7 @@ const Tipo = require('../models/tipo');
 
 exports.getNuevoTipo = (request, response, next) => {
     response.render('nuevo-tipo', {
-    titulo: 'Nuevo Tipo: ' 
+    titulo: 'Nuevo Tipo' 
     }); 
 }
 
@@ -17,6 +17,6 @@ exports.get = (request, response, next) => {
     const tipos = Tipo.fetchAll(); 
     response.render('tipos', { 
     lista_tipos: tipos, 
-    titulo: 'Tabla de tipos: ' 
+    titulo: 'Tipos' 
     });
 }
