@@ -1,0 +1,26 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<main class="container">
+
+    <h1><%= titulo %></h1>
+    <div class="row">
+        <%  for (let tipo of lista_tipos) { %>
+          <div class="col s12 m4 l3">
+            <div class="card big">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="<%= tipo.imagen %>">
+                </div>
+                <div class="card-content">
+                  <span class="card-title"><%= tipo.nombre %></span>
+                  <p><%= tipo.resumen %></p>
+                  <p><a href="#">...</a></p>
+                </div>
+            </div>
+          </div>
+        <% } %>
+    </div>
+
+</main>
+
+<%- include('partials/footer.ejs') %>
