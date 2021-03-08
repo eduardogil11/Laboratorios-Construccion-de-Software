@@ -18,7 +18,7 @@ exports.postNuevoPersonaje = (request, response, next) => {
 exports.get = (request, response, next) => {
     const personajes = Personaje.fetchAll(); 
     console.log('Cookie: ' + request.get('Cookie'));
-    console.log(request.get('Cookie').split(';')[1].trim().split('=')[1]);
+    //console.log(request.get('Cookie').split(';')[1].trim().split('=')[1]);
 
     // Con cookie-parser
     console.log(request.cookies);
