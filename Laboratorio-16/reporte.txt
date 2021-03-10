@@ -1,0 +1,50 @@
+EJERCICIO 2
+
+Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. ¿Cuál es? ¿A qué se debe?
+La tabla materiales tiene una clave con valor de 1000 y acepta el registro, ya que aun no se cuenta con llave primaria.
+
+¿Qué ocurrió?
+Muestra el error de un constraint.
+
+¿Qué información muestra esta consulta sp_helpconstraint materiales?
+Los datos de la tabla materiales.
+
+¿Qué sentencias utilizaste para definir las llaves primarias?
+ALTER TABLE Materiales add constraint llaveMateriales PRIMARY KEY (Clave)
+ALTER TABLE Proveedores add constraint llaveProveedores PRIMARY KEY (RFC)
+ALTER TABLE Proyectos add constraint llaveProyectos PRIMARY KEY (Numero)
+ALTER TABLE Entregan add constraint llaveEntregan PRIMARY KEY (Clave,RFC,Numero,Fecha)
+
+¿Qué sentencias utilizaste para definir este constrait?
+ALTER TABLE tableName drop constraint ConstraintName.
+
+EJERCICIO 3
+
+¿Qué particularidad observas en los valores para clave, rfc y numero?
+Se puede usar la inserción de claves foráneas en la tabla Entregan.
+
+¿Cómo responde el sistema a la inserción de este registro?
+No muestra ningun error.
+
+¿Qué significa el mensaje que emite el sistema?
+Que no permite insertar los valores.
+
+¿Qué significado tiene la sentencia anterior?
+Que la llave foránea fue definida
+
+EJERCICIO 4
+
+¿Qué uso se le está dando a GETDATE()?
+La fecha y la hora de la inserción.
+
+¿Tiene sentido el valor del campo de cantidad?
+No porque es nulo.
+
+¿Cómo responde el sistema?
+No se logra por un error en el constraint Cantidad
+
+¿Qué significa el mensaje?
+Que no se puede tener un valor = 0
+
+Integridad referencial: La integridad referencial es propiedad de la base de datos. 
+La misma significa que la clave externa de una tabla de referencia siempre debe aludir a una fila válida de la tabla a la que se haga referencia.
