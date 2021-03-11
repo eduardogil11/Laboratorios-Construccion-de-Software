@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ¿Que muestra la instrucción sp_help materiales?
 Muestra las características y información de la tabla materiales.
 
@@ -15,22 +14,4 @@ Son los archivos de las tablas con sus datos separados con comas.
 Es la que define el archivo materiales.csv con sus datos.
 
 ¿Qué sucedió?
-=======
-¿Que muestra la instrucción sp_help materiales?
-Muestra las características y información de la tabla materiales.
-
-¿Qué efecto tuvo esta acción?
-Crea las cuatro tablas.
-
-¿Qué utilidad tiene esta manera de ejecutar los comandos de SQL?
-Para guardar las consultas y utilizar menos comandos.
-
-¿Qué relación tienen con las tablas de la base de datos?
-Son los archivos de las tablas con sus datos separados con comas.
-
-¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato en que se encuentran los datos en el archivo materiales.csv?
-Es la que define el archivo materiales.csv con sus datos.
-
-¿Qué sucedió?
->>>>>>> 6be1e3b062fdb9ee94658c6136bfbbc8e992530c
 Los datos se ven en la parte inferior.
