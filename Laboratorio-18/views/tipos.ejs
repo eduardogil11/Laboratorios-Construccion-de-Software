@@ -1,0 +1,88 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<main class="container">
+
+  <h1><%= titulo %></h1>
+  <table class="centered">
+  <thead>
+    <tr>
+        <th>Tipo</th>
+        <th>Fuerte contra</th>
+        <th>Débil contra</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- Planta -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Planta_Pokemon.svg/1200px-Planta_Pokemon.svg.png" width = "100" height = "40"></td>
+      <td>Agua</td>
+      <td>Acero, Fuego, Planta, Dragón</td>
+    </tr>
+    <!-- Fuego -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Fuego_Pokemon.svg/1200px-Fuego_Pokemon.svg.png" width = "100" height = "40"></td>
+      <td>Acero, Planta</td>
+      <td>Fuego, Agua, Dragón</td>
+    </tr>
+    <!-- Agua -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/3/36/Agua_Pokemon.svg" width = "100" height = "40"></td>
+      <td>Fuego</td>
+      <td>Agua, Planta, Dragón</td>
+    </tr>
+    <!-- Eléctrico -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/El%C3%A9ctrico_Pokemon.svg/1280px-El%C3%A9ctrico_Pokemon.svg.png" width = "100" height = "40"></td>
+      <td>Agua</td>
+      <td>Planta, Eléctrico, Dragón</td>
+    </tr>
+    <!-- Psíquico -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/b/b7/Ps%C3%ADquico_Pokemon.svg" width = "100" height = "40"></td>
+      <td>Lucha</td>
+      <td>Acero, Psíquico, Siniestro</td>
+    </tr>
+    <!-- Lucha -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Lucha_Pokemon.svg/1280px-Lucha_Pokemon.svg.png" width = "100" height = "40"></td>
+      <td>Normal</td>
+      <td>Psíquico, Hada</td>
+    </tr>
+    <!-- Siniestro -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/2/23/Siniestro_Pokemon.svg" width = "100" height = "40"></td>
+      <td>Psíquico</td>
+      <td>Lucha, Siniestro, Hada</td>
+    </tr>
+    <!-- Acero -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/2/2e/Acero_Pokemon.svg" width = "100" height = "40"></td>
+      <td>Hada</td>
+      <td>Acero, Fuego, Agua, Eléctrico</td>
+    </tr>
+    <!-- Hada -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Hada_Pokemon.svg/1280px-Hada_Pokemon.svg.png" width = "100" height = "40"></td>
+      <td>Lucha, Dragón, Siniestro</td>
+      <td>Acero, Fuego</td>
+    </tr>
+    <!-- Dragón -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Drag%C3%B3n_Pokemon.svg/1200px-Drag%C3%B3n_Pokemon.svg.png" width = "100" height = "40"></td>
+      <td>Dragón</td>
+      <td>Acero, Hada</td>
+    </tr>
+    <!-- Normal -->
+    <tr>
+      <td><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Normal_Pokemon.svg/1200px-Normal_Pokemon.svg.png" width = "100" height = "40"></td>
+      <td>Ninguno</td>
+      <td>Acero</td>
+    </tr>
+  </tbody>
+</table>
+
+</main>
+
+<%- include('partials/footer.ejs') %>
