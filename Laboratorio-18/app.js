@@ -4,12 +4,15 @@ const path = require('path');
 const app = express();
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const csrf = require('csurf');
+const csrfProtection = csrf(); 
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const rutasPersonajes = require('./routes/personajes');
 const rutasTipos = require('./routes/tipos');
+const rutasPreguntas = require('./routes/preguntas');
 const rutasUsers = require('./routes/users');
 
 //Middleware
@@ -27,6 +30,8 @@ app.use(session({
 //Para acceder a los recursos de la carpeta public
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(csrfProtection);
+
 app.use((request, response, next) => {
     console.log('Middleware!');
     next(); //Le permite a la petición avanzar hacia el siguiente middleware
@@ -34,14 +39,8 @@ app.use((request, response, next) => {
 
 app.use('/personajes', rutasPersonajes);
 app.use('/tipos', rutasTipos);
+app.use('/preguntas', rutasPreguntas);
 app.use('/users', rutasUsers);
-
-app.get('/preguntas', (request, response, next) => {
-    response.render('preguntas', { 
-    titulo: 'Preguntas',
-    isLoggedIn: request.session.isLoggedIn === true ? true : false 
-    });
-});
 
 app.use((request, response, next) => {
     response.statusCode = 404;

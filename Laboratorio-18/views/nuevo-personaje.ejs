@@ -5,9 +5,10 @@
 
     <h1><%= titulo %></h1>
    <form action="nuevo-personaje" method="POST">
-       <h5>Nombre del Pokémon: </h5><input type="text" name="nombre_personaje">
-       <h5>Descripción del Pokémon: </h5><input type="text" name="resumen_personaje">
-       <h5>Link de la imagen del Pokémon: </h5><input type="text" name="imagen_personaje">
+       <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+       <label for="nombre_personaje">Nombre del Pokémon: </label> <input type="text" name="nombre_personaje">
+       <label for="resumen_personaje">Descripción del Pokémon: </label> <input type="text" name="resumen_personaje">
+       <label for="imagen_personaje">Link de la imagen del Pokémon: </label> <input type="text" name="imagen_personaje">
        <br><br>
        <input type="submit" value="Guardar personaje">
        <br><br>

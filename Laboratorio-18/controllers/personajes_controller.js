@@ -3,6 +3,7 @@ const Personaje = require('../models/personaje');
 exports.getNuevoPersonaje = (request, response, next) => {
     response.render('nuevo-personaje', {
     titulo: 'Nuevo Pokémon',
+    csrfToken: request.csrfToken(),
     isLoggedIn: request.session.isLoggedIn === true ? true : false  
     }); 
 }
