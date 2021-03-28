@@ -52,6 +52,7 @@ exports.getLogout = (request, response, next) => {
 exports.getRegister = (request, response, next) => {
     response.render('register', {
         titulo: 'Registra tus datos',
+        csrfToken: request.csrfToken(),
         isLoggedIn: request.session.isLoggedIn === true ? true : false 
         });  
 };

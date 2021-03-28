@@ -5,6 +5,7 @@
 
     <h1><%= titulo %></h1>
    <form action="/users/register" method="POST">
+       <input type="hidden" name="_csrf" value="<%= csrfToken %>">
        <label for="nombre">Nombre: </label> <input type="text" name="nombre" required>
        <label for="usuario">Usuario: </label> <input type="text" name="usuario" required>
        <label for="password">Contraseña: </label> <input type="password" name="password" required>
