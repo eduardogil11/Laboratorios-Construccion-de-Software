@@ -1,0 +1,32 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<main class="container">
+
+    <h1><%= titulo %></h1>
+   <form action="nuevo-personaje" method="POST" enctype="multipart/form-data">
+       <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+       <label for="nombre_personaje">Nombre del Pokémon: </label> 
+       <input type="text" name="nombre_personaje">
+       <label for="resumen_personaje">Descripción del Pokémon: </label> 
+       <input type="text" name="resumen_personaje">
+       <label for="imagen_personaje">Selecciona una imagen del Pokémon: </label> 
+
+       <div class="file-field input-field">
+        <div class="blue darken-4 btn">
+          <span>Imagen</span>
+          <input type="file"  name="imagen_personaje">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+
+       <br>
+       <input type="submit" class="waves-effect blue darken-4 btn" value="Guardar personaje">
+       <br><br>
+   </form>
+   
+</main>
+
+<%- include('partials/footer.ejs') %>
