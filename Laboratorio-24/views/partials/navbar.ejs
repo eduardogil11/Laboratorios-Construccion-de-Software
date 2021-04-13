@@ -1,0 +1,22 @@
+<nav class="nav-extended">
+  <div class="nav-wrapper #424242 grey darken-3">
+    <a href="#" class="brand-logo">Laboratorio 24</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if (isLoggedIn) { %>
+      <li><a href="/users/logout">Cerrar sesión</a></li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="nav-content #424242 grey darken-3">
+    <ul class="tabs tabs-transparent">
+      <% if (isLoggedIn) { %>
+      <li class="tab"><a class="active" href="/personajes">Pokédex</a></li>
+      <li class="tab"><a class="active" href="/personajes/nuevo-personaje">Nuevo pokémon</a></li>
+      <li class="tab"><a class="active" href="/tipos">Tipos</a></li>
+      <li class="tab"><a class="active" href="/tipos/nuevo-tipo">Videojuegos</a></li>
+      <li class="tab"><a class="active" href="/preguntas">Preguntas</a></li>
+      <% } %>
+    </ul>
+  </div>
+</nav>
